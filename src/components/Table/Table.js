@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Row from './Row';
+import Row from '../Table/Row';
 
 
 function Table(props) {
@@ -35,7 +35,7 @@ function Table(props) {
                 <table class="table">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">Id</th>
                     <th scope="col">First</th>
                     <th scope="col">Last</th>
                     <th scope="col">Email</th>
