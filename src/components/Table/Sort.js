@@ -56,7 +56,7 @@ class Sort extends Component {
             type="search"
             placeholder="Search by Last"
             aria-label="Search"
-            onChange={sort}
+            onChange={Sort}
           />
         </div>
       </>
