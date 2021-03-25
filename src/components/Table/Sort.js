@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Row from "./Row";
 
 class Sort extends Component {
   state = {
@@ -10,9 +11,9 @@ class Sort extends Component {
   sortName = (key) => {
     let sortedList;
     let direction;
-    // Sort by last name or first name
+    // Sort by city
     switch (key) {
-      case `last`:
+      case `city`:
         if (this.state.sortingDirection === "asc") {
           sortedList = this.state.filteredEmployees.sort((a, b) =>
             a.name.last > b.name.last ? 1 : -1
@@ -21,19 +22,6 @@ class Sort extends Component {
         } else {
           sortedList = this.state.filteredEmployees.sort((a, b) =>
             a.name.last < b.name.last ? 1 : -1
-          );
-          direction = "asc";
-        }
-        break;
-      case `first`:
-        if (this.state.sortingDirection === "asc") {
-          sortedList = this.state.filteredEmployees.sort((a, b) =>
-            a.name.first > b.name.first ? 1 : -1
-          );
-          direction = "dsc";
-        } else {
-          sortedList = this.state.filteredEmployees.sort((a, b) =>
-            a.name.first < b.name.first ? 1 : -1
           );
           direction = "asc";
         }
@@ -48,7 +36,7 @@ class Sort extends Component {
     });
   };
   render() {
-      const { direction, sortedList } = this.state;
+      const { sortingDirection, filteredEmployees } = this.state;
     
       return (
       <>
@@ -58,7 +46,7 @@ class Sort extends Component {
             type="search"
             placeholder="Search by Last"
             aria-label="Search"
-            onChange={ Sort } //this is probably wrong. will have to look over it tomorrow.
+            onChange={ Row } //this is probably wrong. will have to look over it tomorrow.
           />
         </div>
       </>
