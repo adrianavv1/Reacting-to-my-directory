@@ -48,7 +48,9 @@ class Sort extends Component {
     });
   };
   render() {
-    return (
+      const {  } = this.setState;
+    
+      return (
       <>
         <div class="container-fluid">
           <input
@@ -56,7 +58,7 @@ class Sort extends Component {
             type="search"
             placeholder="Search by Last"
             aria-label="Search"
-            onChange={ this.props.sortedList, this.props.direction } //this is probably wrong. will have to look over it tomorrow.
+            onChange={ this.props.sortedList + this.props.direction } //this is probably wrong. will have to look over it tomorrow.
           />
         </div>
       </>
