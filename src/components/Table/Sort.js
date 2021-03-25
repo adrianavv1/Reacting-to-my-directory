@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 class Sort extends Component {
   state = {
     filteredEmployees: [],
@@ -48,6 +47,20 @@ class Sort extends Component {
       sortingDirection: direction,
     });
   };
-  
+  render() {
+    return (
+      <>
+        <div class="container-fluid">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search by Last"
+            aria-label="Search"
+            onChange={sort}
+          />
+        </div>
+      </>
+    );
+  }
 }
 export default Sort;

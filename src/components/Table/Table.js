@@ -20,7 +20,7 @@ function Table(props) {
         let newList =employeeList.filter((employee) => {
             return employee.name.last.includes(e.target.value)
         })
-
+        //Clue here? filter or sort not being called.
         setFilteredEmployeeList(newList);
     }
 
