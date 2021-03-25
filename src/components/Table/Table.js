@@ -28,7 +28,7 @@ function Table(props) {
     return (
         <>
             <nav class="navbar navbar-light bg-light">
-            <Sort/>
+            <Sort filteredEmployeeList={filteredEmployeeList} setFilteredEmployeeList={setFilteredEmployeeList}/>
             </nav>
             <div>
                 <table class="table">
