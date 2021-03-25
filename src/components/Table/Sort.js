@@ -56,7 +56,7 @@ class Sort extends Component {
             type="search"
             placeholder="Search by Last"
             aria-label="Search"
-            onChange={Sort}
+            onChange={ this.props.sortedList, this.props.direction } //this is probably wrong. will have to look over it tomorrow.
           />
         </div>
       </>
