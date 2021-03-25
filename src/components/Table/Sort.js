@@ -48,7 +48,7 @@ class Sort extends Component {
     });
   };
   render() {
-      const {  } = this.setState;
+      const { direction, sortedList } = this.state;
     
       return (
       <>
@@ -58,7 +58,7 @@ class Sort extends Component {
             type="search"
             placeholder="Search by Last"
             aria-label="Search"
-            onChange={ this.props.sortedList + this.props.direction } //this is probably wrong. will have to look over it tomorrow.
+            onChange={ Sort } //this is probably wrong. will have to look over it tomorrow.
           />
         </div>
       </>
