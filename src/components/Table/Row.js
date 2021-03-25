@@ -4,7 +4,7 @@ function Row(props) {
     return (
         <>
             <tr>
-                <th scope="row">1</th>
+                <th scope="row">{props.employee.login.uuid.slice(0.6)}</th>
                 <td>{props.employee.name.first}</td>
                 <td>{props.employee.name.last}</td>
                 <td>{props.employee.gender}</td>
