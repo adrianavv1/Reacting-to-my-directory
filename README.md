@@ -5,11 +5,16 @@ This application is an employee directory created with React. This application b
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## User Story
+```
+As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+```
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### Getting Started
+
+`npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
