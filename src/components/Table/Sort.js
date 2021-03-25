@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Row from "./Row";
 
 class Sort extends Component {
   state = {
@@ -11,9 +10,9 @@ class Sort extends Component {
   sortName = (key) => {
     let sortedList;
     let direction;
-    // Sort by city
+    // Sort by last name, first name and/or City.
     switch (key) {
-      case `city`:
+      case `last`:
         if (this.state.sortingDirection === "asc") {
           sortedList = this.state.filteredEmployees.sort((a, b) =>
             a.name.last > b.name.last ? 1 : -1
@@ -22,6 +21,19 @@ class Sort extends Component {
         } else {
           sortedList = this.state.filteredEmployees.sort((a, b) =>
             a.name.last < b.name.last ? 1 : -1
+          );
+          direction = "asc";
+        }
+        break;
+      case `first`:
+        if (this.state.sortingDirection === "asc") {
+          sortedList = this.state.filteredEmployees.sort((a, b) =>
+            a.name.first > b.name.first ? 1 : -1
+          );
+          direction = "dsc";
+        } else {
+          sortedList = this.state.filteredEmployees.sort((a, b) =>
+            a.name.first < b.name.first ? 1 : -1
           );
           direction = "asc";
         }
@@ -36,9 +48,7 @@ class Sort extends Component {
     });
   };
   render() {
-      const { sortingDirection, filteredEmployees } = this.state;
-    
-      return (
+    return (
       <>
         <div class="container-fluid">
           <input
@@ -46,11 +56,12 @@ class Sort extends Component {
             type="search"
             placeholder="Search by Last"
             aria-label="Search"
-            onChange={ Row } //this is probably wrong. will have to look over it tomorrow.
+            onChange={Sort} //this is probably wrong..
           />
         </div>
       </>
     );
   }
 }
-export default Sort;
+
+export default Sort
