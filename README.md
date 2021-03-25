@@ -1,7 +1,10 @@
-# Getting Started with Create React App
+# Reacting-to-my-directory
+
+This application is an employee directory created with React. This application breaks up its UI into components, manages component state with React Hooks, and responds to user eventts to sort by City and/or filter by employee last name. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## User Story
 ## Available Scripts
 
 In the project directory, you can run:
