@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 class Sort extends Component {
   state = {
-    filteredEmployees: [],
     sortingDirection: "asc",
     error: "",
   };
@@ -14,12 +13,12 @@ class Sort extends Component {
     switch (key) {
       case `last`:
         if (this.state.sortingDirection === "asc") {
-          sortedList = this.state.filteredEmployees.sort((a, b) =>
+          sortedList = this.props.filteredEmployees.sort((a, b) =>
             a.name.last > b.name.last ? 1 : -1
           );
           direction = "dsc";
         } else {
-          sortedList = this.state.filteredEmployees.sort((a, b) =>
+          sortedList = this.props.filteredEmployees.sort((a, b) =>
             a.name.last < b.name.last ? 1 : -1
           );
           direction = "asc";
@@ -27,12 +26,12 @@ class Sort extends Component {
         break;
       case `first`:
         if (this.state.sortingDirection === "asc") {
-          sortedList = this.state.filteredEmployees.sort((a, b) =>
+          sortedList = this.props.filteredEmployees.sort((a, b) =>
             a.name.first > b.name.first ? 1 : -1
           );
           direction = "dsc";
         } else {
-          sortedList = this.state.filteredEmployees.sort((a, b) =>
+          sortedList = this.props.filteredEmployees.sort((a, b) =>
             a.name.first < b.name.first ? 1 : -1
           );
           direction = "asc";
@@ -42,11 +41,11 @@ class Sort extends Component {
         // nothing selected by default
         break;
     }
+    this.props.setfilteredEmployees(sortedList);
     this.setState({
-      filteredEmployees: sortedList,
       sortingDirection: direction,
     });
-  };
+  };  
   render() {
     return (
       <>
@@ -56,7 +55,7 @@ class Sort extends Component {
             type="search"
             placeholder="Search by Last"
             aria-label="Search"
-            onChange={Sort} //this is probably wrong..
+            onChange={() => {sortName("last")}}
           />
         </div>
       </>
