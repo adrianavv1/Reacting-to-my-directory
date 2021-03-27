@@ -13,11 +13,15 @@ class Sort extends Component {
     switch (key) {
       case `last`:
         if (this.state.sortingDirection === "asc") {
+          console.log("this.props.filteredEmployees",this.props.filteredEmployees);
+
           sortedList = this.props.filteredEmployees.sort((a, b) =>
             a.name.last > b.name.last ? 1 : -1
           );
           direction = "dsc";
         } else {
+          console.log("this.props.filteredEmployees",this.props.filteredEmployees);
+
           sortedList = this.props.filteredEmployees.sort((a, b) =>
             a.name.last < b.name.last ? 1 : -1
           );
@@ -26,11 +30,15 @@ class Sort extends Component {
         break;
       case `first`:
         if (this.state.sortingDirection === "asc") {
+          console.log("this.props.filteredEmployees",this.props.filteredEmployees);
+
           sortedList = this.props.filteredEmployees.sort((a, b) =>
             a.name.first > b.name.first ? 1 : -1
           );
           direction = "dsc";
         } else {
+          console.log("this.props.filteredEmployees",this.props.filteredEmployees);
+
           sortedList = this.props.filteredEmployees.sort((a, b) =>
             a.name.first < b.name.first ? 1 : -1
           );

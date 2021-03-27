@@ -15,7 +15,7 @@ function Table(props) {
             setFilteredEmployeeList(res.results)
         })
     }, [])
-
+    // eslint-disable-next-line 
     function filter(e) {
         let newList =employeeList.filter((employee) => {
             return employee.name.last.includes(e.target.value)
@@ -28,7 +28,7 @@ function Table(props) {
     return (
         <>
             <nav class="navbar navbar-light bg-light">
-            <Sort filteredEmployeeList={filteredEmployeeList} setFilteredEmployeeList={setFilteredEmployeeList}/>
+            <Sort filteredEmployeeList={filteredEmployeeList} setFilteredEmployee={setFilteredEmployeeList}/>
             </nav>
             <div>
                 <table class="table">
