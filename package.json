@@ -2,7 +2,7 @@
   "name": "reacting-to-my-directory",
   "version": "0.1.0",
   "private": true,
-  "homepage": "",
+  "homepage": "https://adrianavv1.github.io/Reacting-to-my-directory/",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/data-grid": "*",
