@@ -1,0 +1,11 @@
+import axios from 'axios';
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+  getUsers: function () {
+    return axios.get(
+      'https://randomuser.me/api/?inc=name,email,phone,login,id&results=10&nat=us'
+    );
+  },
+};
+
